@@ -83,9 +83,10 @@ namespace Object_Moving
                 {
                     _x += 1;
 
-                    if (arr[_x + char_width / 2, _y + char_height / 2] == true)
+                    if (arr[_x + char_width / 2 + 5 , _y + char_height / 2 ] == true)
                     {
                         _x -= 1;
+
                     }
                     Invalidate();
                     Delay(4);
@@ -100,7 +101,7 @@ namespace Object_Moving
                 {
                     _x -= 1;
 
-                    if (arr[_x + char_width / 2, _y + char_height / 2] == true)
+                    if (arr[_x + char_width / 2 - 5, _y + char_height / 2] == true)
                     {
                         _x += 1;
                     }
@@ -115,7 +116,7 @@ namespace Object_Moving
                 for (int i = 0; i < 10; i++)
                 {
                     _y -= 1;
-                    if (arr[_x + char_width / 2, _y + char_height / 2] == true)
+                    if (arr[_x + char_width / 2, _y + char_height / 2 - 5 ] == true)
                     {
                         _y += 1;
                     }
@@ -130,7 +131,7 @@ namespace Object_Moving
                 {
                     _y += 1;
 
-                    if (arr[_x + char_width / 2, _y + char_height / 2] == true)
+                    if (arr[_x + char_width / 2, _y + char_height / 2 + 5] == true)
                     {
                         _y -= 1;
                     }
