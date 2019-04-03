@@ -1,0 +1,10 @@
+C:\Users\Son\source\repos\Object_Moving\obj\Debug\Escape_Room_Project.csprojAssemblyReference.cache
+C:\Users\Son\source\repos\Object_Moving\obj\Debug\Object_Moving.Properties.Resources.resources
+C:\Users\Son\source\repos\Object_Moving\obj\Debug\Escape_Room_Project.csproj.GenerateResource.cache
+C:\Users\Son\source\repos\Object_Moving\obj\Debug\Escape_Room_Project.csproj.CoreCompileInputs.cache
+C:\Users\Son\source\repos\Object_Moving\obj\Debug\Object_Moving.exe
+C:\Users\Son\source\repos\Object_Moving\obj\Debug\Object_Moving.pdb
+C:\Users\Son\source\repos\Object_Moving\bin\Debug\Object_Moving.exe.config
+C:\Users\Son\source\repos\Object_Moving\bin\Debug\Object_Moving.exe
+C:\Users\Son\source\repos\Object_Moving\bin\Debug\Object_Moving.pdb
+C:\Users\Son\source\repos\Object_Moving\obj\Debug\Object_Moving.FormView.resources
