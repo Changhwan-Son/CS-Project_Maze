@@ -1,0 +1,200 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Object_Moving
+{
+    public partial class FormView : Form
+    {
+        private int _x;     // 말 x 좌표
+        private int _y;     // 말 y 좌표 
+        static int labelNum = 57;                // 라벨 (벽) 개수
+        Array arrLabel = Array.CreateInstance(typeof(Label), labelNum);
+
+        public FormView()
+        {
+            InitializeComponent();
+
+            // 시작 위치
+            _x = 10;
+            _y = 10;
+
+            // 라벨 (벽) 배열에 추가
+            arrLabel.SetValue(label1, 0);
+            arrLabel.SetValue(label2, 1);
+            arrLabel.SetValue(label3, 2);
+            arrLabel.SetValue(label4, 3);
+            arrLabel.SetValue(label5, 4);
+            arrLabel.SetValue(label6, 5);
+            arrLabel.SetValue(label7, 6);
+            arrLabel.SetValue(label8, 7);
+            arrLabel.SetValue(label9, 8);
+            arrLabel.SetValue(label10, 9);
+            arrLabel.SetValue(label11, 10);
+            arrLabel.SetValue(label12, 11);
+            arrLabel.SetValue(label13, 12);
+            arrLabel.SetValue(label14, 13);
+            arrLabel.SetValue(label15, 14);
+            arrLabel.SetValue(label16, 15);
+            arrLabel.SetValue(label17, 16);
+            arrLabel.SetValue(label18, 17);
+            arrLabel.SetValue(label19, 18);
+            arrLabel.SetValue(label20, 19);
+            arrLabel.SetValue(label21, 20);
+            arrLabel.SetValue(label22, 21);
+            arrLabel.SetValue(label23, 22);
+            arrLabel.SetValue(label24, 23);
+            arrLabel.SetValue(label25, 24);
+            arrLabel.SetValue(label26, 25);
+            arrLabel.SetValue(label27, 26);
+            arrLabel.SetValue(label28, 27);
+            arrLabel.SetValue(label29, 28);
+            arrLabel.SetValue(label30, 29);
+            arrLabel.SetValue(label31, 30);
+            arrLabel.SetValue(label32, 31);
+            arrLabel.SetValue(label33, 32);
+            arrLabel.SetValue(label34, 33);
+            arrLabel.SetValue(label35, 34);
+            arrLabel.SetValue(label36, 35);
+            arrLabel.SetValue(label37, 36);
+            arrLabel.SetValue(label38, 37);
+            arrLabel.SetValue(label39, 38);
+            arrLabel.SetValue(label40, 39);
+            arrLabel.SetValue(label41, 40);
+            arrLabel.SetValue(label42, 41);
+            arrLabel.SetValue(label43, 42);
+            arrLabel.SetValue(label44, 43);
+            arrLabel.SetValue(label45, 44);
+            arrLabel.SetValue(label46, 45);
+            arrLabel.SetValue(label47, 46);
+            arrLabel.SetValue(label48, 47);
+            arrLabel.SetValue(label49, 48);
+            arrLabel.SetValue(label50, 49);
+            arrLabel.SetValue(label51, 50);
+            arrLabel.SetValue(label52, 51);
+            arrLabel.SetValue(label53, 52);
+            arrLabel.SetValue(label54, 53);
+            arrLabel.SetValue(label55, 54);
+            arrLabel.SetValue(label56, 55);
+            arrLabel.SetValue(label57, 56);
+        }
+
+        // 말 생성
+        private void FormView_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.FillRectangle(Brushes.BlueViolet, _x, _y, 10, 10);
+        }
+
+        // 키 입력
+        private void FormView_KeyDown(object sender, KeyEventArgs e)
+        {
+            // 오른쪽 방향키 입력
+            if (e.KeyCode == Keys.Right)
+            {
+                for (int k = 0; k < 10; k++)
+                {
+                    _x += 1;
+                    for (int i = 0; i < labelNum; i++)
+                    {
+                        if ((_x + 9) == ((Label)(arrLabel.GetValue(i))).Location.X && _y <= ((Label)(arrLabel.GetValue(i))).Location.Y + ((Label)(arrLabel.GetValue(i))).Size.Height - 10 && _y >= ((Label)(arrLabel.GetValue(i))).Location.Y)
+                        {
+                            _x -= 1;
+                        }
+                    }
+                    Invalidate();
+                    Delay(4);
+                }
+            }
+            
+            // 왼쪽 방향키 입력
+            else if (e.KeyCode == Keys.Left)
+            {
+                for (int k = 0; k < 10; k++)
+                {
+                    _x -= 1;
+                    for (int i = 0; i < labelNum; i++)
+                    {
+                        if ((_x - 9) == ((Label)(arrLabel.GetValue(i))).Location.X + ((Label)(arrLabel.GetValue(i))).Size.Width - 10 && _y <= ((Label)(arrLabel.GetValue(i))).Location.Y + ((Label)(arrLabel.GetValue(i))).Size.Height - 10 && _y >= ((Label)(arrLabel.GetValue(i))).Location.Y)
+                        {
+                            _x += 1;
+                        }
+                    }
+                    Invalidate();
+                    Delay(4);
+                }
+            }
+            // 위쪽 방향키 입력
+            else if (e.KeyCode == Keys.Up)
+            {
+                for (int k = 0; k < 10; k++)
+                {
+                    _y -= 1;
+                    for (int i = 0; i < labelNum; i++)
+                    {
+                        if ((_y - 9) == ((Label)(arrLabel.GetValue(i))).Location.Y + ((Label)(arrLabel.GetValue(i))).Size.Height - 10 && _x <= ((Label)(arrLabel.GetValue(i))).Location.X + ((Label)(arrLabel.GetValue(i))).Size.Width - 10 && _x >= ((Label)(arrLabel.GetValue(i))).Location.X)
+                        {
+                           _y += 1;
+                        }
+                    }
+                    Invalidate();
+                    Delay(4);
+                }
+            }
+            // 아래쪽 방향키 입력
+            else if (e.KeyCode == Keys.Down)
+            {
+
+                for (int k = 0; k < 10; k++)
+                {
+                    _y += 1;
+                    for (int i = 0; i < labelNum; i++)
+                    {
+                        if ((_y + 9) == ((Label)(arrLabel.GetValue(i))).Location.Y && _x <= ((Label)(arrLabel.GetValue(i))).Location.X + ((Label)(arrLabel.GetValue(i))).Size.Width - 10 && _x >= ((Label)(arrLabel.GetValue(i))).Location.X)
+                        {
+                            _y -= 1;
+                        }
+                    }
+                    Invalidate();
+                    Delay(4);
+                }
+            }
+            // finish 지점 도착 시 finish 문구 출력 및 창 종료
+            if ((_x >= 380 && _x  < 400) && _y >= 390)
+            {
+                MessageBox.Show("Finish!");
+                Close();
+            }
+        }
+
+        // Deley 함수 
+        private static DateTime Delay(int MS)
+        {
+            DateTime ThisMoment = DateTime.Now;
+            TimeSpan duration = new TimeSpan(0, 0, 0, 0, MS);
+            DateTime AfterWards = ThisMoment.Add(duration);
+
+            while (AfterWards >= ThisMoment)
+            {
+                System.Windows.Forms.Application.DoEvents();
+                ThisMoment = DateTime.Now;
+            }
+
+            return DateTime.Now;
+        }
+
+        private void FormView_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
+    }
+
+
+}
