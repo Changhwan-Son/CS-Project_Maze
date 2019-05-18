@@ -16,32 +16,35 @@ namespace UI_Design
         public Form1()
         {
             InitializeComponent();
+           
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             SidePanel.Top = btnHome.Top;
+            home1.BringToFront();
         }
 
-        private void btnSingle_Click(object sender, EventArgs e)
+        private void btnPlay_Click(object sender, EventArgs e)
         {
-            SidePanel.Top = btnSingle.Top;
-            this.Visible = false;
-            FormView Form2 = new FormView();
-            Form2.Show();
+            
+            SidePanel.Top = btnPlay.Top;
+            playSelect1.BringToFront();
             
             
             
         }
 
-        private void btnMulti_Click(object sender, EventArgs e)
+        private void btnCredit_Click(object sender, EventArgs e)
         {
-            SidePanel.Top = btnMulti.Top;
+            SidePanel.Top = btnCredit.Top;
+            credit1.BringToFront();
         }
 
         private void btnRank_Click(object sender, EventArgs e)
         {
             SidePanel.Top = btnRank.Top;
+            rank1.BringToFront();
         }
 
         private void btnOption_Click(object sender, EventArgs e)
@@ -52,6 +55,12 @@ namespace UI_Design
         private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            home1.BringToFront();
+
         }
     }
 }

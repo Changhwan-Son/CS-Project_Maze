@@ -32,12 +32,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnCredit = new System.Windows.Forms.Button();
             this.btnOption = new System.Windows.Forms.Button();
             this.btnRank = new System.Windows.Forms.Button();
-            this.btnSingle = new System.Windows.Forms.Button();
-            this.btnMulti = new System.Windows.Forms.Button();
+            this.btnPlay = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.home1 = new UI_Design.Home();
+            this.credit1 = new UI_Design.Credit();
+            this.playSelect1 = new UI_Design.PlaySelect();
+            this.loading1 = new UI_Design.loading();
+            this.rank1 = new UI_Design.Rank();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,10 +51,10 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.btnCredit);
             this.panel1.Controls.Add(this.btnOption);
             this.panel1.Controls.Add(this.btnRank);
-            this.panel1.Controls.Add(this.btnSingle);
-            this.panel1.Controls.Add(this.btnMulti);
+            this.panel1.Controls.Add(this.btnPlay);
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -82,6 +87,23 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnCredit
+            // 
+            this.btnCredit.FlatAppearance.BorderSize = 0;
+            this.btnCredit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCredit.Font = new System.Drawing.Font("Calibri Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCredit.ForeColor = System.Drawing.Color.White;
+            this.btnCredit.Image = ((System.Drawing.Image)(resources.GetObject("btnCredit.Image")));
+            this.btnCredit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCredit.Location = new System.Drawing.Point(28, 426);
+            this.btnCredit.Name = "btnCredit";
+            this.btnCredit.Size = new System.Drawing.Size(258, 83);
+            this.btnCredit.TabIndex = 1;
+            this.btnCredit.Text = "        CREDIT";
+            this.btnCredit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCredit.UseVisualStyleBackColor = true;
+            this.btnCredit.Click += new System.EventHandler(this.btnCredit_Click);
+            // 
             // btnOption
             // 
             this.btnOption.FlatAppearance.BorderSize = 0;
@@ -90,7 +112,7 @@
             this.btnOption.ForeColor = System.Drawing.Color.White;
             this.btnOption.Image = ((System.Drawing.Image)(resources.GetObject("btnOption.Image")));
             this.btnOption.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOption.Location = new System.Drawing.Point(28, 426);
+            this.btnOption.Location = new System.Drawing.Point(28, 337);
             this.btnOption.Name = "btnOption";
             this.btnOption.Size = new System.Drawing.Size(258, 83);
             this.btnOption.TabIndex = 1;
@@ -107,7 +129,7 @@
             this.btnRank.ForeColor = System.Drawing.Color.White;
             this.btnRank.Image = ((System.Drawing.Image)(resources.GetObject("btnRank.Image")));
             this.btnRank.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRank.Location = new System.Drawing.Point(29, 337);
+            this.btnRank.Location = new System.Drawing.Point(28, 248);
             this.btnRank.Name = "btnRank";
             this.btnRank.Size = new System.Drawing.Size(258, 83);
             this.btnRank.TabIndex = 3;
@@ -116,39 +138,22 @@
             this.btnRank.UseVisualStyleBackColor = true;
             this.btnRank.Click += new System.EventHandler(this.btnRank_Click);
             // 
-            // btnSingle
+            // btnPlay
             // 
-            this.btnSingle.FlatAppearance.BorderSize = 0;
-            this.btnSingle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSingle.Font = new System.Drawing.Font("Calibri Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSingle.ForeColor = System.Drawing.Color.White;
-            this.btnSingle.Image = ((System.Drawing.Image)(resources.GetObject("btnSingle.Image")));
-            this.btnSingle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSingle.Location = new System.Drawing.Point(28, 159);
-            this.btnSingle.Name = "btnSingle";
-            this.btnSingle.Size = new System.Drawing.Size(258, 83);
-            this.btnSingle.TabIndex = 2;
-            this.btnSingle.Text = "        SINGLE PLAY";
-            this.btnSingle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSingle.UseVisualStyleBackColor = true;
-            this.btnSingle.Click += new System.EventHandler(this.btnSingle_Click);
-            // 
-            // btnMulti
-            // 
-            this.btnMulti.FlatAppearance.BorderSize = 0;
-            this.btnMulti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMulti.Font = new System.Drawing.Font("Calibri Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMulti.ForeColor = System.Drawing.Color.White;
-            this.btnMulti.Image = ((System.Drawing.Image)(resources.GetObject("btnMulti.Image")));
-            this.btnMulti.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMulti.Location = new System.Drawing.Point(28, 248);
-            this.btnMulti.Name = "btnMulti";
-            this.btnMulti.Size = new System.Drawing.Size(258, 83);
-            this.btnMulti.TabIndex = 1;
-            this.btnMulti.Text = "        MULTI PLAY";
-            this.btnMulti.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMulti.UseVisualStyleBackColor = true;
-            this.btnMulti.Click += new System.EventHandler(this.btnMulti_Click);
+            this.btnPlay.FlatAppearance.BorderSize = 0;
+            this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlay.Font = new System.Drawing.Font("Calibri Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.ForeColor = System.Drawing.Color.White;
+            this.btnPlay.Image = ((System.Drawing.Image)(resources.GetObject("btnPlay.Image")));
+            this.btnPlay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlay.Location = new System.Drawing.Point(28, 159);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(258, 83);
+            this.btnPlay.TabIndex = 2;
+            this.btnPlay.Text = "        PLAY";
+            this.btnPlay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // btnHome
             // 
@@ -176,18 +181,60 @@
             this.panel2.Size = new System.Drawing.Size(904, 19);
             this.panel2.TabIndex = 0;
             // 
+            // home1
+            // 
+            this.home1.Location = new System.Drawing.Point(333, 70);
+            this.home1.Name = "home1";
+            this.home1.Size = new System.Drawing.Size(795, 471);
+            this.home1.TabIndex = 8;
+            // 
+            // credit1
+            // 
+            this.credit1.Location = new System.Drawing.Point(333, 102);
+            this.credit1.Name = "credit1";
+            this.credit1.Size = new System.Drawing.Size(817, 431);
+            this.credit1.TabIndex = 7;
+            // 
+            // playSelect1
+            // 
+            this.playSelect1.Location = new System.Drawing.Point(333, 102);
+            this.playSelect1.Name = "playSelect1";
+            this.playSelect1.Size = new System.Drawing.Size(817, 431);
+            this.playSelect1.TabIndex = 5;
+            // 
+            // loading1
+            // 
+            this.loading1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.loading1.Location = new System.Drawing.Point(0, 0);
+            this.loading1.Name = "loading1";
+            this.loading1.Size = new System.Drawing.Size(1205, 669);
+            this.loading1.TabIndex = 9;
+            // 
+            // rank1
+            // 
+            this.rank1.Location = new System.Drawing.Point(288, 70);
+            this.rank1.Name = "rank1";
+            this.rank1.Size = new System.Drawing.Size(914, 489);
+            this.rank1.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1192, 669);
+            this.Controls.Add(this.loading1);
+            this.Controls.Add(this.home1);
+            this.Controls.Add(this.credit1);
+            this.Controls.Add(this.playSelect1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.rank1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -198,12 +245,17 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnOption;
         private System.Windows.Forms.Button btnRank;
-        private System.Windows.Forms.Button btnSingle;
-        private System.Windows.Forms.Button btnMulti;
+        private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.Button btnCredit;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel SidePanel;
+        private PlaySelect playSelect1;
+        private Credit credit1;
+        private Home home1;
+        private loading loading1;
+        private Rank rank1;
     }
 }
 
